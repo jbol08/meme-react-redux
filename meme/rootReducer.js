@@ -6,7 +6,7 @@ const INITIAL_STATE = {
 
 const rootReducer = (state=INITIAL_STATE, action) => {
     if (action.type === 'ADD_MEME') {
-        return { ...state, memes: [...state.memes, action.paylod ]};
+        return { ...state, memes: [...state.memes, action.meme ]};
     };
     if (action.type === 'REMOVE_MEME') {
         return {...state, memes:state.memes.filter(meme => meme.id !== action.id)}
